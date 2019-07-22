@@ -13,12 +13,18 @@ export default new Router({
     {
       path: '/info',
       name: 'elseInfo',
-      component: () => import(/* webpackChunkName: "elseInfo" */ '@/pages/else/views/info/index.vue')
+      component: () => import(/* webpackChunkName: "elseInfo" */ '@/pages/else/views/info/index.vue'),
+      meta: {
+        title: 'elseInfo'
+      }
     },
     {
       path: '/well',
       name: 'elseWell',
-      component: () => import(/* webpackChunkName: "elseWell" */ '@/pages/else/views/well/index.vue')
+      component: () => import(/* webpackChunkName: "elseWell" */ '@/pages/else/views/well/index.vue'),
+      meta: {
+        title: 'elseWell'
+      }
     }
   ]
 })

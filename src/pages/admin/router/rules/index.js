@@ -12,12 +12,18 @@ export default [
       {
         path: 'regular',
         name: 'rulesRegular',
-        component: () => import(/* webpackChunkName: "rulesRegular" */ '@/pages/admin/views/rules/regular/index.vue')
+        component: () => import(/* webpackChunkName: "rulesRegular" */ '@/pages/admin/views/rules/regular/index.vue'),
+        meta: {
+          title: 'rulesRegular'
+        }
       },
       {
         path: 'more',
         name: 'rulesMore',
-        component: () => import(/* webpackChunkName: "rulesMore" */ '@/pages/admin/views/rules/more/index.vue')
+        component: () => import(/* webpackChunkName: "rulesMore" */ '@/pages/admin/views/rules/more/index.vue'),
+        meta: {
+          title: 'rulesRegular'
+        }
       }
     ]
   }

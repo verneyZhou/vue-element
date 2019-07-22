@@ -3,6 +3,9 @@ export default [
   {
     path: '/prod',
     name: 'prod',
-    component: () => import(/* webpackChunkName: "prod" */ '@/pages/admin/views/prod/index.vue')
+    component: () => import(/* webpackChunkName: "prod" */ '@/pages/admin/views/prod/index.vue'),
+    meta: {
+      title: 'prod'
+    }
   }
 ]

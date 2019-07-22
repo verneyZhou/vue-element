@@ -19,7 +19,7 @@ require.context是一个webpack的api,通过执行require.context函数获取一
 */
 // 自动加载同级目录下的index.js结尾的文件
 const routerContext = require.context('./', true, /index\.js$/)
-console.log('======componentsContext', routerContext.keys())
+console.log('======routerContext', routerContext.keys())
 routerContext.keys().forEach(v => {
   // 如果是根目录的 index.js 不处理
   if (v.startsWith('./index')) return
