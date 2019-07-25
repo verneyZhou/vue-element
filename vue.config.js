@@ -22,6 +22,7 @@ module.exports = {
   }),
   chainWebpack: config => {
     // #region svg-config
+    // npm install svg-sprite-loader -D，下载打包雪碧图组件
     const rule = config.module.rule('svg')
     rule.exclude.add(path.resolve('./src/assets/icons/svg'))
     const svgRule = config.module.rule('auto-svg') // 找到svg-loader

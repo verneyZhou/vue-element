@@ -38,7 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 > * babel.config.js 配置
 > * element-ui配置
 > * 使用node命令生成组件
-> * axios的封装  coontent-type类型
+> * axios的封装  content-type类型
 
 ### vue-cli3 + element项目
 #### 1.工具安装
@@ -57,4 +57,25 @@ vue -V
 ```
 vue create vue-element
 ```
+## 配置
+
+## 功能
+1. [x] 通过node生成组件
+2. [x] 全局组件自动扫描注册
+3. [x] 路由自动引入
+4. [x] axios封装
+5. [ ] element-ui引入，自定义主题
+6. [ ] vue项目国际化
+7. [ ] 富文本编辑器
+8. [ ] markdown编辑器
+9. [ ] 拖拽
+10. [ ] 引入svg-icon
+    ```
+    npm下载svg-sprite-loader
+    vue.config.js中进行配置
+    新建assets/icons文件夹，引入svg文件，在入口文件index.js中统一注册
+    components/global中新建全局组件cc-svg-icon
+    在页面入口js中引入全局组件：import '@/components'；同时引入svg文件：import '@/assets/icons'
+
+    ```
 

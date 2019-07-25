@@ -12,7 +12,7 @@ let plugins = [
     'component',
     {
       'libraryName': 'element-ui', // 引入elementUI
-      'styleLibraryName': 'theme-chalk'
+      'styleLibraryName': 'theme-chalk' // 引入主题
     }
   ]
 ]

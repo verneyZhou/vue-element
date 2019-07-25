@@ -1,13 +1,15 @@
 <template>
     <div id="app" ref="login" class="vm-login">
-        <div>
-
-        </div>
+        <Content />
     </div>
 </template>
 <script>
 import { login } from '@/api/login'
+import Content from './Content.vue'
 export default {
+  components: {
+    Content
+  },
   data () {
     return {
 
@@ -22,7 +24,11 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<!--
+scoped会给当前组件节点添加data-v-***这种唯一属性，style样式只能作用于当前节点
+所以在类似于App.vue这种设置公共样式的根容器，通常不加scoped
+-->
+<style lang="scss">
 @import '~@/assets/css/index.scss';
     .vm-login{
         height:100vh;
