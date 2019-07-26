@@ -9,6 +9,9 @@
                 <!-- 用户名 -->
                 <el-form-item prop="name">
                     <el-input autofocus v-model="loginData.name" placeholder="请输入用户名">
+                        <!-- slot方式引入icon -->
+                         <!-- <i slot="prefix" class="el-input__icon el-icon-date"></i> -->
+                         <!-- svg icon -->
                         <cc-svg-icon style="padding-left: 5px;" slot="prefix" icon-class="user"></cc-svg-icon>
                     </el-input>
                 </el-form-item>
