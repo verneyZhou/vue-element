@@ -65,7 +65,6 @@ vue create vue-element
 npm install chalk --save-dev 安装chalk插件，可让控制台输出语句有颜色之分
 根目录下新建scripts文件夹，新建generateComponent.js，放置生成组件代码；新增一个template.js文件，放置组件模板的代码
 配置package.json脚本：npm run new:comp
-
 ```
 2. [x] 全局组件自动扫描注册
 3. [x] 路由自动引入
@@ -82,6 +81,5 @@ npm install chalk --save-dev 安装chalk插件，可让控制台输出语句有�
     新建assets/icons文件夹，引入svg文件，在入口文件index.js中统一注册
     components/global中新建全局组件cc-svg-icon
     在页面入口js中引入全局组件：import '@/components'；同时引入svg文件：import '@/assets/icons'
-
     ```
 
