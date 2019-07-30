@@ -35,6 +35,30 @@ export default [
     meta: {
       title: 'partd'
     }
+  },
+  {
+    path: '/desc/parte',
+    name: 'descParte',
+    component: () => import(/* webpackChunkName: "descParte" */ '@/pages/admin/views/desc/partE/index.vue'),
+    meta: {
+      title: 'partE'
+    }
+  },
+  {
+    path: '/desc/partf',
+    name: 'descPartf',
+    component: () => import(/* webpackChunkName: "descPartf" */ '@/pages/admin/views/desc/partF/index.vue'),
+    meta: {
+      title: 'partf'
+    }
+  },
+  {
+    path: '/desc/partg',
+    name: 'descPartg',
+    component: () => import(/* webpackChunkName: "descPartg" */ '@/pages/admin/views/desc/partG/index.vue'),
+    meta: {
+      title: 'partg'
+    }
   }
 
 ]

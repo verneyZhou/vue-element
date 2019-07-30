@@ -14,11 +14,20 @@ module.exports = {
   assetsDir: 'static', // 放置生成的静态资源
   css: {
     loaderOptions: { // 向预处理器 Loader 传递选项
-
+      sass: { // 可以这样向所有 Sass 样式传入共享的全局变量
+        data: `@import '~css/var.scss';
+        @import '~css/mixin.scss';`
+      }
     }
   },
-  configureWebpack: () => ({
-
+  configureWebpack: () => ({// 该对象将会被 webpack-merge 合并入最终的 webpack 配置。
+    devtool: 'source-map',
+    resolve: {
+      alias: { // 设置目录别名alias
+        '~css': path.resolve('./src/assets/css'),
+        '~img': path.resolve('./src/assets/img')
+      }
+    }
   }),
   chainWebpack: config => {
     // #region svg-config

@@ -4,7 +4,6 @@
     </div>
 </template>
 <script>
-import { login } from '@/api/login'
 import Content from './Content.vue'
 export default {
   components: {
@@ -16,11 +15,6 @@ export default {
     }
   },
   created () {
-    login({ name: '奈斯' }).then(res => {
-      console.log(res)
-    }).catch(err => {
-      console.log(err)
-    })
   }
 }
 </script>

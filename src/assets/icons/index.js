@@ -9,8 +9,8 @@ const svgContext = require.context('./svg', true, /\.svg$/)
  * resolve()返回的是请求的module的id;
  * id是该context module的id;
  */
-// 引入所有模块,由于request返回了一个函数，该函数接收req作为参数，
-// 在这里其实我们就是把request.keys()中的每一个module传入了request的返回函数中了
+// 引入所有模块,由于svgContext返回了一个函数，该函数接收req作为参数，
+// 在这里其实我们就是把svgContext.keys()中的每一个module传入了svgContext的返回函数中了
 /** 不太懂？？？？ */
 svgContext.keys().map(svgContext)
 

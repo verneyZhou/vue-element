@@ -32,6 +32,7 @@
     </div>
 </template>
 <script>
+import { login } from '@/api/login'
 export default {
   data () {
     return {
@@ -54,20 +55,27 @@ export default {
 
   },
   methods: {
-    doLogin () {
+    async doLogin () {
+      if (this.loading) return
       this.loading = true
       this.$refs.loginForm.validate(async validate => {
         console.log('=====validate', validate)
         this.loading = false
         if (validate) { // 有效
-          this.handleLogin({
-            username: this.form.name,
-            password: this.form.password,
-            loginDateTime: Date.now()
-          }).then(res => {
+          try {
+            let data = {
+              username: this.loginData.name,
+              password: this.loginData.password,
+              loginDateTime: Date.now()
+            }
+            const res = await login(data)
+            console.log('=======login res', res)
+          } catch (err) {
+            console.log('===login err', err)
+          } finally {
             this.loading = false
-            this.$router.push('/dashboard')
-          })
+            location.href = '/admin.html'
+          }
         } else {
           console.log('error submit!!')
           return false
