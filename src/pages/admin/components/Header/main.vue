@@ -10,7 +10,7 @@
         </div>
         <!-- 面包屑导航 -->
         <div class="padding-10">
-            <!-- 1.无过渡效果 -->
+            <!-- 1.无过渡效果  -->
             <!-- <el-breadcrumb separator-class="el-icon-arrow-right">
                 <el-breadcrumb-item v-for="item in breadcrumbItems" :key="item.path">
                 {{item.name}}
