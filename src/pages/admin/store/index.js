@@ -47,6 +47,10 @@ export default new Vuex.Store({
     // 获取面包屑导航列表
     GET_BREADCRUMB_ITEMS: async ({ commit }, payload) => {
       return commit('SETSTATUS', { type: 'breadcrumbItems', value: payload })
+    },
+    // 改变menu风格
+    CHANGE_MENU_STYLE: async ({ commit }, payload) => {
+      return commit('SETSTATUS', { type: 'curMenuStyle', value: payload })
     }
   },
   modules: {

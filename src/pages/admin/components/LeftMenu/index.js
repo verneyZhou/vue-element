@@ -41,8 +41,8 @@ export default {
     },
     // 改变面包屑列表
     changeBreadcrumb (route) {
-      let oneLevelMenu = {}
-      let twoLevelMenu = {}
+      let oneLevelMenu = null
+      let twoLevelMenu = null
       menuConfig.forEach(menu => {
         if (menu.children) {
           const item = menu.children.find(item => item.path === route.path)
@@ -57,8 +57,11 @@ export default {
           }
         }
       })
-      console.log('===[oneLevelMenu, twoLevelMenu]', [oneLevelMenu, twoLevelMenu])
-      this.GET_BREADCRUMB_ITEMS([oneLevelMenu, twoLevelMenu])
+      let arr = []
+      oneLevelMenu && arr.push(oneLevelMenu)
+      twoLevelMenu && arr.push(twoLevelMenu)
+      console.log('===arr', arr)
+      this.GET_BREADCRUMB_ITEMS(arr)
     },
     renderMenu (menus) {
       return menus.map(menu => {

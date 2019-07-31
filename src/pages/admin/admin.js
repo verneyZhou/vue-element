@@ -5,6 +5,7 @@ import router from './router'
 
 import '@/components' // 引入全局组件
 import '@/assets/icons' // 引入所有全局注册svg-icon
+import '@/lib/element-ui' // 引入常用组件
 
 Vue.config.productionTip = false // 设置为 false 以阻止 vue 在启动时生成生产提示。 https://cn.vuejs.org/v2/api/#productionTip
 

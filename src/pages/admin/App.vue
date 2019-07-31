@@ -5,9 +5,12 @@
             <section class="content">
                 <Header />
                 <div class="viewer">
-                    <router-view class="viewer-detail"/>
+                    <transition name="fade-move">
+                        <router-view class="viewer-detail"></router-view>
+                    </transition>
                 </div>
             </section>
+            <MenuSet />
         </div>
 
     </div>
@@ -15,15 +18,19 @@
 <script>
 import LeftMenu from './components/LeftMenu'
 import Header from './components/Header'
+import MenuSet from './components/MenuSet'
 export default {
   components: {
     LeftMenu,
-    Header
+    Header,
+    MenuSet
   }
 }
 </script>
 <style lang="scss">
 @import '~@/assets/css/index.scss';
+// 引入过渡样式
+@import '~@/assets/css/animation.scss';
 .main{
     @include flex(row);
   .content {
