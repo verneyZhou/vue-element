@@ -88,4 +88,3 @@ npm install chalk --save-dev 安装chalk插件，可让控制台输出语句有�
 
 ## demo
 1. [ ] transition做h5动画
-
